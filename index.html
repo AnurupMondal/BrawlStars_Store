@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brawl Store</title>
+
+    <!-- page icon -->
+    <link rel="icon" href="./public/brawl-icon.ico">
+    <!-- link icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- link custom font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <!-- link file css -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" defer></script>
+
+</head>
+<body>
+    <div class="container">
+
+        <nav>
+            <div class="logo">
+                <i class="fa-solid fa-store"></i>
+                <h1>Brawl Store</h1>
+            </div>
+            <ul>
+                <li id = "toggle" onclick = "darkMode(this)"><i class="fa-solid fa-circle-half-stroke"></i></a></li>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="cart-icon"><a href="#"><img draggable="false" src="./public/shopping-cart.png" ></a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <div class="div-text">
+                <span>outfit of the day</span>
+                <h3>all your</h3>
+                <h1>styles are here</h1>
+                <p>anything we want to include in the website.</p>
+                <a href="#" class="btn">buy now</a>
+            </div>
+
+            <div class="div-img">
+                <img draggable="false" id = "big-img" src="./public/brawlers/leon.png" alt="">
+            </div>
+
+            <div class="small-img">
+                <img draggable="false" onclick = "myBrawler(this.src)" src = "./public/brawlers/Bibi.png" alt="">
+                <img draggable="false" onclick = "myBrawler(this.src)" src = "./public/brawlers/crow.png" alt="">
+                <img draggable="false" onclick = "myBrawler(this.src)" src = "./public/brawlers/jessy.png" alt="">
+                <img draggable="false" onclick = "myBrawler(this.src)" src = "./public/brawlers/leon.png" alt="">
+                <img draggable="false" onclick = "myBrawler(this.src)" src = "./public/brawlers/sandy.png" alt="">
+                <img draggable="false" onclick = "myBrawler(this.src)" src = "./public/brawlers/shelly.png" alt="">
+                <img draggable="false" onclick = "myBrawler(this.src)" src = "./public/brawlers/spike.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let bigimg = document.getElementById('big-img');
+
+        function myBrawler(brawl)
+        {
+            bigimg.src = brawl;
+        }
+
+        function darkMode(e)
+        {
+            e.classList.toggle("dark");
+
+            let elements = document.querySelectorAll("*");
+
+            for (let i = 0; i < elements.length; i++)
+            {
+                elements[i].classList.toggle("dark-mode") 
+            }
+        }
+
+    </script>
+
+</body>
+</html>
