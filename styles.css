@@ -6,13 +6,23 @@
     -moz-window-dragging: no-drag;
 }
 
-* .dark-mode {
-    background-color: transparent !important;
-    color: #ffffff !important;
+* .dark-mode
+{
+    background-color: transparent;
+    color: #ffffff ;
 }
 
-body.dark-mode {
-    background-color: black !important;
+body.dark-mode
+{
+    background-color: black;
+}
+
+nav .logo h1.dark-mode
+{
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 400;
+    padding-left: 10px;
 }
 
 .container
@@ -42,7 +52,7 @@ nav .logo
 
 nav .logo i
 {
-    color: #D81D84 !important;
+    color: #D81D84;
     font-size: 28px;
 }
 
@@ -51,6 +61,7 @@ nav .logo h1
     color: #444;
     font-size: 28px;
     font-weight: 400;
+    padding-left: 10px;
 }
 
 nav ul {
@@ -116,6 +127,14 @@ nav ul li.active a
     align-items: center;
     padding: 0 5%;
 }
+
+.content .div-text
+{
+    flex: 1 0 50%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .content .div-text span
 {
     color: #fff;
@@ -158,8 +177,8 @@ nav ul li.active a
 
 .content .div-text .btn
 {
-    background: #3f0223 !important;
-    color: #fff !important;
+    background: #3f0223 ;
+    color: #fff;
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
@@ -181,6 +200,8 @@ nav ul li.active a
     width: 100%;
     height: 100%;
     max-height: 500px;
+    margin-bottom: 85px;
+    margin-right: 50px;
     object-position: 50% 50%;
     object-fit: contain;
     border-radius: 10px;
@@ -195,7 +216,49 @@ nav ul li.active a
     transform: translateX(-50%);
     display: flex;
     gap: 80px;
+    overflow: hidden;
+    overflow-x: auto;
+    width: 90%;
+    padding-bottom: 10px;
 }
+
+.small-img
+{
+    padding-top: 10px;
+    width: auto;
+    height: 130px;
+
+    &::-webkit-scrollbar
+    {
+        background-color: transparent;
+        width: 0px;
+        height: 7px;
+      }
+}
+
+.small-img:hover {
+    &::-webkit-scrollbar
+    {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-thumb
+    {
+      background-color: rgba(0,0,0,.2)
+    }
+  }
+  @media (hover: none)
+  {
+    .small-img {
+      &::-webkit-scrollbar
+      {
+        width: 8px;
+      }
+      &::-webkit-scrollbar-thumb
+      {
+        background-color: rgba(0,0,0,.2)
+      }
+    }
+  }
 
 .content .small-img img
 {

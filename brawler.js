@@ -1,11 +1,18 @@
 const brawlerImages = [
     "./public/brawlers/Bibi.png",
     "./public/brawlers/crow.png",
-    "./public/brawlers/jessy.png",
+    
+    "./public/brawlers/crawler.png",
+    "./public/brawlers/Surge.png",
     "./public/brawlers/leon.png",
     "./public/brawlers/sandy.png",
     "./public/brawlers/shelly.png",
-    "./public/brawlers/spike.png"
+    "./public/brawlers/spike.png",
+    "./public/brawlers/b2.png",
+    "./public/brawlers/Daco.png",
+    "./public/brawlers/b3.png",
+    "./public/brawlers/b4.png",
+    "./public/brawlers/jessy.png"
 ];
 
 const smallDiv = document.querySelector(".small-img");
@@ -37,6 +44,7 @@ brawlerImages.forEach((image, index) => {
     img.src = image;
     img.draggable = false;
     img.dataset.index = index;
+    img.alt = image.split("/")[3].split(".")[0];
 
     img.addEventListener("click", setCurrentImage);
 
